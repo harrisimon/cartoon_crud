@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from ..serializers import CharacterSerializer
+from ..serializers import CharacterSerializer, CharacterPlayedSerializer
 from ..models.character import Character
 from rest_framework import status
 from rest_framework.views import APIView
@@ -10,7 +10,7 @@ class CharacterView(APIView):
     serializer_class = CharacterSerializer
     def get(self, request):
         characters = Character.objects.all()
-        serializer = CharacterSerializer(characters, many = True)
+        serializer = CharacterPlayedSerializer(characters, many = True)
         return Response({'characters': serializer.data})
 
     def post(self, request):
@@ -27,7 +27,7 @@ class CharacterDetailView(APIView):
         serializer_class = CharacterSerializer
         def get(self, request, pk):
             character = get_object_or_404(Character, pk=pk)
-            serializer = CharacterSerializer(character)
+            serializer = CharacterPlayedSerializer(character)
             return Response({'character':serializer.data})
 
 

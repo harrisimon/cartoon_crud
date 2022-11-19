@@ -11,5 +11,5 @@ class VoiceActor(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f'{self.first_name} {self.last_name} played a character.'
+        return f'{self.first_name} {self.last_name}'
     
