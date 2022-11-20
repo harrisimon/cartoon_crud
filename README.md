@@ -24,9 +24,12 @@ This is an app for creating lists of cartoon characters and respective voice act
 
 ### Starting Instructions
 #### Requirements
-- Python3
-- PIPenv
-- Postgresql
-- Django / Django REST Frameworks
+`pip3 install --upgrade pip`
+
+`pip install pipenv`
+
+`pipenv install django==4.1 psycopg2-binary`
+
+`python manage.py runserver`
 
 To use this application, you will need the requirements listed above.
