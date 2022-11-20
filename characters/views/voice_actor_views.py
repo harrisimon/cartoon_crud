@@ -35,7 +35,7 @@ class VoiceActorDetailView(APIView):
 
     def put(self, request, pk):
         voice_actor = get_object_or_404(VoiceActor, pk=pk)
-        serializer = VoiceActorSerializer
+        serializer = VoiceActorSerializer(voice_actor, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
