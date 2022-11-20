@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'cartoons.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'cartoon-crud',
+        'NAME': 'cartoon_crud',
     }
 }
 
