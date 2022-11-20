@@ -4,13 +4,21 @@
 This is an app for creating lists of cartoon characters and respective voice actors as well as shows.
 
 ### Routes Table
-| Route      | Cartoon characters | Voice Actors    |
+| Verb      | URI Pattern | Controller#Action    |
 | :---        |    :----:   |          ---: |
-| Create      | `characters/`  | `voice-actors`   |
-| Show      |    `characters/`   | `voice-actors`   |
-| Get      | `characters/<int:pk>/`       | `voice-actors/<int:pk>/`   |
-| Put   |  `characters/<int:pk>/`       | `voice-actors/<int:pk>/`     |
-| Delete   |  `characters/<int:pk>/`        | `voice-actors/<int:pk>/`      |
+| POST      | `characters/`  | `characters#create`   |
+| GET     |    `characters/`   | `characters#index`  |
+| PUT      | `characters/<int:pk>/`       | `characters#show`  |
+| DELETE  |  `characters/<int:pk>/`        | `characters#delete`      |
+| POST      | `voice-actors/`  | `voice-actors#create`   |
+| GET     |    `voice-actors/`   | `characters#index`  |
+| PUT      | `voice-actors/<int:pk>/`       | `voice-actors#show`  |
+| DELETE  |  `voice-actors/<int:pk>/`        | `voice-actors#delete`      |
+| POST      | `shows/`  | `shows#create`   |
+| GET     |    `shows/`   | `shows#index`  |
+| PUT      | `shows/<int:pk>/`       | `shows#show`  |
+| DELETE  |  `shows/<int:pk>/`        | `shows#delete`      |
+
 
 
 
