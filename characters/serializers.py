@@ -9,6 +9,12 @@ class CharacterSerializer(serializers.ModelSerializer):
         fields = '__all__'
         model = Character
 
+class CharacterReadSerializer(serializers.ModelSerializer):
+    voiced_by = serializers.StringRelatedField()
+    class Meta:
+        fields = '__all__'
+        model = Character
+
 class ShowSerializer(serializers.ModelSerializer):
     class Meta:
         fields = '__all__'
