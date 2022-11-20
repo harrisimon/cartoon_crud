@@ -8,6 +8,7 @@ from rest_framework.response import Response
 
 class ShowView(APIView):
     """View class for shows / viewing all and creating"""
+    serializer_class = ShowSerializer
     def get(self, request):
         shows = Show.objects.all()
         serializer = ShowSerializer(shows, many = True)
