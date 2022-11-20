@@ -7,9 +7,10 @@ class Character(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     occupation = models.CharField(max_length=100)
-    voice_actor = models.ForeignKey(
+    voiced_by = models.ForeignKey(
         VoiceActor,
         on_delete=models.CASCADE,
+        related_name='character_played'
     )
 
     created_at = models.DateTimeField(auto_now_add=True)
