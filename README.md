@@ -8,7 +8,7 @@ This is an app for creating lists of cartoon characters and respective voice act
 | :---        |    :----:   |          ---: |
 | Create      | `characters/`  | `voice-actors`   |
 | Show      |    `characters/`   | `voice-actors`   |
-| Get      | `characters/<int:pk>/`       | `voice-actors/<int:pk>/` s   |
+| Get      | `characters/<int:pk>/`       | `voice-actors/<int:pk>/`   |
 | Put   |  `characters/<int:pk>/`       | `voice-actors/<int:pk>/`     |
 | Delete   |  `characters/<int:pk>/`        | `voice-actors/<int:pk>/`      |
 
